@@ -1,0 +1,10 @@
+rootProject.name='Android_interaction_demo1'
+include ':app'
+
+//配置添加-原生引入flutter module之后
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir,
+        'flutter_interaction_demo1/.android/include_flutter.groovy'
+))
+include ':flutter_interaction_demo1'
